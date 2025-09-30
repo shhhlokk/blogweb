@@ -5,7 +5,7 @@ if(!isset($_GET['id'])) {
 
 $postId = intval($_GET['id']);
 
-$conn = new mysqli("localhost", "root", "", "blog_db");
+$conn = new mysqli("database-1.c5k0amm2utg0.ap-south-1.rds.amazonaws.com", "admin", "admin2005", "database-1");
 if($conn->connect_error) die("Connection Error: " . $conn->connect_error);
 
 $sql = "SELECT topic_title, topic_date, image_filename, topic_para 
@@ -44,3 +44,4 @@ $conn->close();
 
 </body>
 </html>
+
